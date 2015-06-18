@@ -25,6 +25,11 @@ class LinkedList {
 
   insert( nElement, after ) {
     var currNode, nNode;
+
+    if(nElement === "head") {
+      throw Error("You can't add another head")
+    }
+
     after = after || "head";
     nNode = new Nodes(nElement);
     currNode = this.find(after);
@@ -35,7 +40,7 @@ class LinkedList {
     return nNode;
   }
 
-  remove(item) {
+  remove( item ) {
     var prevNode, currNode;
     prevNode = this.findPrev(item);
     currNode = prevNode.next;
