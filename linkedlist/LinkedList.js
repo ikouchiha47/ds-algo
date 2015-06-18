@@ -23,21 +23,21 @@ class LinkedList {
     return currNode;
   }
 
-  insert( nElement, after ) {
-    var currNode, nNode;
+  insert( newElement, after ) {
+    var currNode, newNode;
 
-    if(nElement === "head") {
+    if(newElement === "head") {
       throw Error("You can't add another head")
     }
 
     after = after || "head";
-    nNode = new Nodes(nElement);
+    newNode = new Nodes(newElement);
     currNode = this.find(after);
 
-    nNode.next = currNode.next;
-    currNode.next = nNode;
+    newNode.next = currNode.next;
+    currNode.next = newNode;
 
-    return nNode;
+    return newNode;
   }
 
   remove( item ) {

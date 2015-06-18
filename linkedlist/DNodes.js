@@ -1,6 +1,6 @@
 'use strict';
 
-class DNodes {
+class DoublyLinkedNodes {
   constructor(element) {
     this.element = element;
     this.next = null
@@ -8,4 +8,4 @@ class DNodes {
   }
 }
 
-module.exports = DNodes;
+module.exports = DoublyLinkedNodes;

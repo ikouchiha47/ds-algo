@@ -1,10 +1,10 @@
 'use strict';
 
-var DNodes = require("./DNodes");
+var DoublyLinkedNodes = require("./DNodes");
 
-class DLinkedList {
+class DoublyLinkedList {
   constructor() {
-    this.head = new DNodes("head");
+    this.head = new DoublyLinkedNodes("head");
   }
 
   find( item ) {
@@ -17,41 +17,41 @@ class DLinkedList {
     return currNode;
   }
 
-  insertAfter( nElement, after ) {
-    var nNode, currNode;
+  insertAfter( newElement, after ) {
+    var newNode, currNode;
 
     after = after || "head";
 
-    if(nElement === "head") {
+    if(newElement === "head") {
       throw Error("cannot insert another head");
     }
 
-    nNode = new DNodes(nElement);
+    newNode = new DoublyLinkedNodes(newElement);
     currNode = this.find(after);
 
-    nNode.next = currNode.next;
-    nNode.previous = currNode;
-    currNode.next = nNode;
+    newNode.next = currNode.next;
+    newNode.previous = currNode;
+    currNode.next = newNode;
 
-    return nNode;
+    return newNode;
   }
 
-  insertBefore( nElement, before ) {
-    var nNode, currNode;
+  insertBefore( newElement, before ) {
+    var newNode, currNode;
 
-    if(nElement === "head") {
+    if(newElement === "head") {
       throw Error("Cannot insert another head");
     }
 
-    nNode = new DNodes(nElement);
+    newNode = new DoublyLinkedNodes((newElement);
     currNode = this.find(before);
 
-    nNode.previous = currNode.previous;
-    nNode.next = currNode;
-    currNode.previous.next = nNode;
-    currNode.previous = nNode;
+    newNode.previous = currNode.previous;
+    newNode.next = currNode;
+    currNode.previous.next = newNode;
+    currNode.previous = newNode;
 
-    return nNode;
+    return newNode;
   }
 
   remove( item ) {
@@ -75,4 +75,4 @@ class DLinkedList {
   }
 }
 
-module.exports = DLinkedList;
+module.exports = DoublyLinkedList;
