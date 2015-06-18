@@ -1,20 +1,48 @@
 'use strict';
 
-var DoublyLinkedNodes = require("./DNodes");
+var DoublyLinkedNodes = require("./DoublyLinkedNodes");
 
 class DoublyLinkedList {
   constructor() {
     this.head = new DoublyLinkedNodes("head");
+    this.pos = this.head;
   }
 
   find( item ) {
     var currNode = this.head;
 
+    while(currNode.element != item) {
+      currNode = currNode.next;
+    }
+
+    return currNode;
+  }
+
+  findLast() {
+    var currNode = this.head;
     while(currNode.next != null) {
       currNode = currNode.next;
     }
 
     return currNode;
+  }
+
+  advance(n) {
+    var currNode = this.head;
+    while(n > 0 && currNode.next != null) {
+      currNode = currNode.next;
+      n -= 1;
+    }
+    this.pos = currNode;
+    return currNode;
+  }
+
+
+  back() {
+    if(this.pos.previous != null)
+      this.pos = this.pos.previous;
+
+    return this.pos;
   }
 
   insertAfter( newElement, after ) {
@@ -72,6 +100,18 @@ class DoublyLinkedList {
       console.log(currNode.next.element)
       currNode = currNode.next
     }
+  }
+
+  displayReverse() {
+    var currNode = this.findLast();
+    while(currNode.previous != null) {
+      console.log(currNode.element);
+      currNode = currNode.previous;
+    }
+  }
+
+  show() {
+    console.log(this.pos.element)
   }
 }
 
