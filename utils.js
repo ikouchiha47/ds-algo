@@ -11,6 +11,10 @@ class Utils {
       }
     }
   }
+
+  each(data, callback) {
+    return [].forEach(data, callback)
+  }
 }
 
 module.exports = new Utils()
