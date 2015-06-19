@@ -111,7 +111,7 @@ class DoublyLinkedList {
   }
 
   show() {
-    console.log(this.pos.element)
+    cons
   }
 }
 
