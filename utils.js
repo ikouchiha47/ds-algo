@@ -13,7 +13,7 @@ class Utils {
   }
 
   each(data, callback) {
-    return [].forEach(data, callback)
+    return [].forEach.call(data, callback)
   }
 }
 
