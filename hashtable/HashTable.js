@@ -8,33 +8,12 @@ class HashTable {
     this.table = new Array(137);
   }
 
-  toHash( data ) {
-    const H = 37;
-    var tableLength = this.table.length,
-        hash = 0;
-    for(let i = 0, len = data.length; i < len; i++) {
-      hash = (H * hash + data.charCodeAt(i))
-    }
-    hash = hash % tableLength;
+  toHash( data ) {}
 
-    if(hash < 0)
-      hash += tableLength;
+  insert( data ) {}
 
-    return hash;
-  }
-
-  simpleHash( data ) {
-    var total = 0;
-    for(let i = 0, len = data.length; i < len; i++) {
-      total += data.charCodeAt(i);
-    }
-
-    return total % this.table.length;
-  }
-
-  insert( data ) {
-    var pos = this.toHash(data);
-    this.table[pos] = data;
+  mod( value, divisor ) {
+    return value % divisor;
   }
 
   showDistribution() {
@@ -44,4 +23,4 @@ class HashTable {
   }
 }
 
-module.exports = HashTable;
+export default HashTable;
