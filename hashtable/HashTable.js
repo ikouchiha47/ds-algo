@@ -10,10 +10,16 @@ class HashTable {
 
   toHash( data ) {
     const H = 37;
-    var hash = 0;
+    var tableLength = this.table.length,
+        hash = 0;
     for(let i = 0, len = data.length; i < len; i++) {
-      hash = (H * hash + data.charCodeAt(i)) % this.table.length
+      hash = (H * hash + data.charCodeAt(i))
     }
+    hash = hash % tableLength;
+
+    if(hash < 0)
+      hash += tableLength;
+
     return hash;
   }
 
