@@ -1,0 +1,7 @@
+{
+  "name": "DoublyLinkedList",
+  "version": "1.0.0",
+  "description": "Doubly linked list",
+  "main": "DoublyLinkedList.js",
+  "author": "argentum47"
+}

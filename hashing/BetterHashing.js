@@ -1,15 +1,13 @@
 'use strict';
 
-import * as HashTable from "HashTable";
-
-class BetterHashTable extends HashTable {
+class BetterHashing {
   constructor( tableLength ) {
-    super(tableLength);
+    this.tableLength = tableLength || 137;
   }
 
-  toHash( data ) {
+  make( data ) {
     const H = 37;
-    var tableLength = this.table.length,
+    var tableLength = this.tableLength,
         hash = 0;
 
     for(let i = 0, len = data.length; i < len; i++) {
@@ -22,11 +20,6 @@ class BetterHashTable extends HashTable {
 
     return hash;
   }
-
-  insert( data ) {
-    var pos = this.toHash(data);
-    this.table[pos] = data;
-  }
 }
 
-module.exports = BetterHashTable;
+module.exports = BetterHashing;

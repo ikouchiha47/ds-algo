@@ -1,0 +1,7 @@
+{
+  "name": "hashing",
+  "version": "1.0.0",
+  "description": "simple hashing utility with horner's method",
+  "main": "BetterHashing.js",
+  "author": "argentum47"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "hashtable",
+  "version": "1.0.2",
+  "description": "hash table implementation with chaining",
+  "main": "HashTable.js",
+  "author": "argentum47"
+}

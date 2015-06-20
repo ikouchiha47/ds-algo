@@ -1,0 +1,30 @@
+{
+  "name": "algos",
+  "version": "1.0.0",
+  "description": "data-structures and algorithms",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/argentum47/ds-algo.git"
+  },
+  "keywords": [
+    "ds",
+    "algo",
+    "js"
+  ],
+  "dependencies": {
+    "utils": "./lib/",
+    "LinkedList": "./linkedlist/simple",
+    "DoublyLinkedList": "./linkedlist/doubly",
+    "hashing": "./hashing",
+    "hashtable": "./hashtable"
+  },
+  "author": "argentum47",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/argentum47/ds-algo/issues"
+  },
+  "homepage": "https://github.com/argentum47/ds-algo#readme"
+}

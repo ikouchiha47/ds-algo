@@ -1,26 +1,26 @@
 'use strict';
 
-var __ = require("../utils");
+var Hashing = require("hashing");
+var _ = require("utils");
 
 class HashTable {
   constructor(tableLength) {
     tableLength = tableLength || 137;
     this.table = new Array(137);
+    this.hash = new Hashing(tableLength);
   }
 
   toHash( data ) {}
 
   insert( data ) {}
 
-  mod( value, divisor ) {
-    return value % divisor;
-  }
 
   showDistribution() {
-    __.each(this.table, function(data, index) {
-      console.log(index + " : " + data)
+    _.each(this.table, function(data, index) {
+      if(data)
+        console.log(index + " : " + data)
     });
   }
 }
 
-export default HashTable;
+module.exports = HashTable;
