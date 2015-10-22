@@ -44,8 +44,7 @@
 ### Tree
 
   <h4> methods</h4>
-  
-  ##### Binary Search Tree
+  <h5>Binary Search Tree</h5>
   `BST#insert(data)`
 
   `BST#inOrder(node)`
@@ -61,8 +60,7 @@
 ### Graph
 
   <h4> methods</h4>
-  
-  ##### Undirected Graphs
+  <h5>Undirected Graphs</h5>
   `Graph#new(numberOfVertices)`
 
   `Graph#addEdge(vertex1, vertex2)`
