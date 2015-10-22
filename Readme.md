@@ -5,7 +5,6 @@
   2. Doubly
 
   #### methods
-  ==========
 
   ##### Simple Linked List
   `LinkedList#insert("value", "prevNodeValue" || "head")`
@@ -26,8 +25,6 @@
   2. Probing
 
   #### methods
-  ============
-
   ##### Hash Chaining
   `HashSeperateChaining#insert(key, value)`
   
@@ -47,8 +44,6 @@
 ### Tree
 
   #### methods
-  ============
-
   ##### Binary Search Tree
   `BST#insert(data)`
 
@@ -65,8 +60,6 @@
 ### Graph
 
   #### methods
-  ===============
-
   ##### Undirected Graphs
   `Graph#new(numberOfVertices)`
 
