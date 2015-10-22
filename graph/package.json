@@ -1,0 +1,7 @@
+{
+  "name": "ugraph",
+  "version": "1.0.0",
+  "description": "undirected graph with topological sorting",
+  "main": "Graph.js",
+  "author": "argentum47"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "bstree",
+  "version": "1.0.0",
+  "description": "binary search tree",
+  "main": "Tree.js",
+  "author": "argentum47"
+}
