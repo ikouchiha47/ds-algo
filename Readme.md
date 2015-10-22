@@ -43,7 +43,8 @@
 
 ### Tree
 
-  #### methods
+  <h4> methods</h4>
+  
   ##### Binary Search Tree
   `BST#insert(data)`
 
@@ -59,7 +60,8 @@
 
 ### Graph
 
-  #### methods
+  <h4> methods</h4>
+  
   ##### Undirected Graphs
   `Graph#new(numberOfVertices)`
 
