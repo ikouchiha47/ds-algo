@@ -109,10 +109,6 @@ class DoublyLinkedList {
       currNode = currNode.previous;
     }
   }
-
-  show() {
-    cons
-  }
 }
 
 module.exports = DoublyLinkedList;
